@@ -78,7 +78,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 24px 12px;
+  padding-top: 32px;
   background-color: white;
 }
 
@@ -105,13 +105,13 @@ nav {
   margin-left: 14px;
   text-decoration: none;
   font-size: 18px;
-  color: black;
+  color: #243e63;
   font-weight: bold;
   padding: 8px 16px;
 }
 
 .sign__up--button {
-  background-color: #7342d6;
+  background-color: #243e63;
   width: 100%;
   color: white;
   border: none;
@@ -129,37 +129,32 @@ HEADER
 */
 
 header {
+  height: calc(100vh - 80px);
+}
+
+.header__container {
+  padding-top: 25px;
   width: 100%;
+  max-width: 720px;
   margin: 0 auto;
-}
-
-.row {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  height: 100%;
   display: flex;
-  padding-right: 8px;
+  flex-direction: column; 
+  justify-content: space-around;
 }
 
-container {
+.header__description {
+  flex-direction: column;
+  width: 40%;
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
 }
-
-.text-section {
-  flex: 1;
-  margin-right: 20px;
+.header__img {
+  font-display: column;
+  display: flex;
 }
-
-.image-section img {
-  max-width: 100%;
-  height: auto;
-}
-
 h1 {
   font-size: 56px;
-  color: black;
+  color: #243e63;
   margin-bottom: 24px;
   text-align: center;
 }
@@ -179,12 +174,33 @@ button:active {
 }
 
 .btn {
-  background-color: #7342d6;
+  background-color: #243e63;
   color: white;
   padding: 12px 24px;
   font-size: 20px;
   border-radius: 4px;
   border: none;
+}
+
+.header__img--wrapper {
+  padding: 20px;
+  z-index: 2;
+}
+
+.container {
+  padding: 56px 0;
+}
+
+.row {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .no-cursor {
