@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  height: 100wv;
+  height: 100vw;
   overflow-x: hidden;
 }
 
@@ -22,9 +22,6 @@ nav {
 
 img {
   width: 100%;
-  height: 100%;
-  max-height: 50vh;
-  padding: 20px;
 }
 
 p {
@@ -145,7 +142,7 @@ padding-bottom: 2px;
 }
 
 .btn__menu--svg:hover {
-  filter: invert(28%) sepia (94%) saturate(7476%)
+  filter: invert(28%) sepia(94%) saturate(7476%);
 }
 
 /*
@@ -255,7 +252,7 @@ FEATURES
 .section__title {
   font-size: 48px;
   font-weight: 900;
-  color: rgb (36, 62, 99);
+  color: rgb(36, 62, 99);
   line-height: 1.5;
   margin: 16px 0;
   letter-spacing: 0.025em;
@@ -309,9 +306,6 @@ p {
 QUALITY WORK
 
 */
-#quality work {
-  padding-top: 8vw;
-}
 
 .container {
   width: 100%;
