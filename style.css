@@ -64,8 +64,9 @@ NAVIGATION
 */
 
 section {
-  padding: 0px 32px;
+  padding: 0 32px;
 }
+
 nav {
   padding-top: 32px;
   display: flex;
@@ -79,7 +80,47 @@ nav {
 .row {
   width: 100%;
   max-width: 1280px;
-  margin: 0px auto;
+  margin: 0 auto;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  padding-bottom: 4px;
+}
+
+.nav__logo -- img {
+  height: 40px;
+  width: 40px;
+}
+
+img {
+  width:100%;
+}
+
+.nav__logo--title {
+  font-weight: 900;
+  font-size: 24px;
+  margin-left: 12px;
+  padding-bottom: 2px;
+  letter-spacing: 0.6px;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  padding-bottom: 2px;
+}
+
+.nav__link {
+  font-size: 14px;
+  font-weight: 600;
+  padding-top: 4px;
+  letter-spacing: 0.35px;
+  border-bottom: 2px solid transparent;
+  position: relative;
+  transition: all 300ms;
 }
 
 .menu {
@@ -137,11 +178,6 @@ nav {
   border-bottom: 2px solid transparent;
 }
 
-a {
-  display: inline;
-  text-decoration: none;
-}
-
 /*
 
 HEADER
@@ -184,6 +220,20 @@ header .row {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+.header__email--input {
+  width: 100%;
+  border-radius: 500px;
+  border: 2px solid rgb(229, 231, 235);
+  padding: 20px 192px 20px 32px;
+  color: rgb(36, 62, 99);
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: border-color 300ms;
 }
 
 .header__email--btn {
