@@ -14,25 +14,24 @@
 </head>
 <body>
   <!--HEADER-->
-  <section>
+  <section id="landing">
     <nav>
-      <div class="logo">
-        <img src="./assets/assets/logo.2c489fc453a1783cbadacf914efa3df6.svg" alt="treact simified  logo" class="logo__img>
-        <div class="logo__text><b>Treact</b>
-          </div>
+      <div class="row nav__row">
+      <div class="nav__logo">
+        <img class="nav__logo--img" src=".assets/assets/logo.2c489fc453a1783cbadacf914efa3df6.svg" alt="LOGO">
+        <div class="nav__logo--title">
+          Treact</div>
         </div>
-        <ul class="nav__links">
-          <li><a href="#about" class="nav__links" onclick="closeMenu()">About</a></li>
-          <li><a href="#blog" class="nav__links" onclick="closeMenu()">Blog</a></li>
-          <li><a href="#pricing" class="nav__links" onclick="closeMenu()">Pricing</a></li>
-          <li><a href="#contact us" class="nav__links" onclick="closeMenu()">Contact Us</a></li>
-
-          <li><a href="#login" class="nav__links" onclick="closeMenu()">Login</a></li>
-          <button class="sign__up--button"onclick="closeMenu()">Sign up</button>
-           <i class="fas fa-times"></i>
-        </ul>  
-      </div>
-    </div>
+        <div class="nav__links">
+          <a href="#about" class="nav__link" onclick="closeMenu()">About</a>
+          <a href="#blog" class="nav__link" onclick="closeMenu()">Blog</a>
+          <a href="#pricing" class="nav__link" onclick="closeMenu()">Pricing</a>
+          <a href="#contact us" class="nav__link" onclick="closeMenu()">Contact Us</a>
+          <a href="#login" class="nav__link login" onclick="closeMenu()">Login</a>
+          <a href="#" class="nav__link nav__link--primary"></a>
+          </div>
+          <button class="btn__menu" onclick="closeMenu()">Sign up</button>
+      </div> 
     </nav>
 
   <header>
@@ -61,12 +60,9 @@
     <div class="container">
       <div class="row__narrow">
         <h4 class="section__tag">FEATURES</h4>
-      <h2 class="section__title">We have Amazing <span class="purple">Service.</span> 
+      <h2>We have Amazing <span class="purple">Service.</span> 
       </h2>
       <div class="section__para"> Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eliusmod tempor incididunt ut labore et delore magna aliqua.
-      </div>
-     </div>
-
     <div class="services">
       <div class="service">
           <figure class="service__img--wrapper">
@@ -122,6 +118,8 @@
         <p Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.>
         </p>
       </div>
+    </div>
+      </div>
       </div>
   </section>
 
@@ -129,7 +127,7 @@
     <div class="container">
       <div class="row__narrow">
         <h1 class="section__tag">QUALITY WORK</h1>
-      <h2 class="section__title">Designed & Developed by <span class="purple"> Professionals.</span>
+      <h2 class="section__title">Designed & Developed by <span class="purple">Professionals.</span>
       </h2>
       <div class="section__para"> Lorem ipsum dolor sit amet, consectetur adipicing elit, sed do eliusmod tempor incididunt ut labore et delore magna aliqua.
       <button class="btn"onclick="closeMenu()">Learn More</button>
