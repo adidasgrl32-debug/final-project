@@ -10,11 +10,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  display: block;
-  margin: 8px;
-}
-
 element.style {
   justify-content: space-between;
 }
@@ -176,6 +171,11 @@ nav {
   transform: translateX(0);
 }
 
+.menu--open {
+  max-height: 100vh;
+  overflow-y: hidden;
+}
+
 .btn__menu--close {
   position: fixed;
   top: 24px;
@@ -185,11 +185,18 @@ nav {
 .btn__menu {
   background-color: transparent;
   display: none;
-  border-width: medium;
-  border-style: none;
-  border-color: white;
-  border-image: none;
-  transition: 300ms;
+  border: none;
+  transition: all 300ms ease;
+}
+
+svg {
+  width: 24;
+  height: 24;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .menu__links {
@@ -685,9 +692,18 @@ section {
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px,rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
+.plan:nth-child(1) .plan__stripe, .plan:nth-child(1) .plan__button {
+  color: #f7fafc;
+  background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+}
+
+.plan:nth-child(2) .plan__name, .plan:nth-child(2) .plan__price, .plan:nth-child(2) .plan__target, .plan:nth-child(2) .plan__duration, .plan:nth-child(2) .plan__feature {
+  background: linear-gradient(135deg, rgb(76,81,191) 0%, rgb(102, 126, 234) 100%);
+  color: #f7fafc;
+}
+
 .plan:nth-child(3) .plan__stripe, .plan:nth-child(3) .plan__button {
-    color: #f7fafc;
-    background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
+  background: linear-gradient(115deg, rgb(245, 101, 101) 0%, rgb(254, 178, 178) 100%);
 }
 
 .plan__stripe {
@@ -709,10 +725,6 @@ section {
   line-height: 1.625;
 }
 
-.plan:nth-child(odd) .plan__name, .plan:nth-child(odd) .plan__price, .plan:nth-child(odd) .plan__target {
-    color: #1a202c;
-}
-
 .plan__name {
   font-size: 20px;
 }
@@ -732,10 +744,6 @@ section {
   letter-spacing: 0.1em;
 }
 
-.plan:nth-child(1) .plan__middle, .plan:nth-child(3) .plan__middle {
-    border-top: 2px solid rgb(229, 231, 235);
-    border-bottom: 2px solid rgb(229, 231, 235);
-}
 
 .plan__middle {
   margin-left: -2rem;
@@ -875,6 +883,25 @@ p {
   margin-top: 4px;
 }
 
+.fa-solid, .fas {
+  font-weight: 900;
+}
+
+.fa-star {
+  --fa: "\f005";
+}
+
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+    font-family: "Font Awesome 6 Free";
+}
+
+.fa-star {
+    color: rgb(246 173 85);
+    display: inline-block;
+    height: 1.25rem 20px;
+    width: 1.25rem;
+}
+
 .testimonial__title {
   color: #4a5568;
   line-height: 1.625;
@@ -902,7 +929,7 @@ p {
   align-items: center;
 }
 
-.testimonials__img {
+.testimonial__img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -928,6 +955,7 @@ p {
 .testimonial__buttons {
   display: flex;
   align-items: center;
+  margin-left: 160px;
 }
 
 .testimonial__button {
@@ -1085,12 +1113,7 @@ img {
   transition: all 300ms ease;
 }
 
-/*
-
-MEDIA - 640px
-
-*/
-
+/* SMALL PHONES, LARGE SMARTPHONES*/
 @media (max-width: 640px) {
   .nav__logo {
     margin: 8px 0;
@@ -1114,7 +1137,7 @@ MEDIA - 640px
     height: auto;
   }
 
-  .header__customers--title {
+  .header__customers--title{
     font-size: 14px;
     letter-spacing: 0.05em;
   }
@@ -1142,19 +1165,14 @@ MEDIA - 640px
   }
 }
 
-/*
-
-MEDIA - 768px
-
-*/
-
+/* SMALL PHONES, TABLETs, LARGE SMARTPHONES */
 @media (max-width: 768px) {
   .footer__copyright {
     margin-top: 32px;
   }
 
   .features {
-    max-width: 768px;
+    justify-content: center;
   }
 
   .feature {
@@ -1180,12 +1198,7 @@ MEDIA - 768px
   }
 }
 
-/*
-
-MEDIA - 1024px
-
-*/
-
+/* TABLETS */
 @media (max-width: 1024px) {
   .nav__links {
     display: none;
@@ -1261,12 +1274,7 @@ MEDIA - 1024px
   }
 }
 
-/*
-
-MEDIA - 1280px
-
-*/
-
+/* LARGE SMARTPHONES, TABLETs */
 @media (max-width: 1280px) {
   .header__description--para {
     font-size: 16px;
