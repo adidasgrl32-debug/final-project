@@ -286,19 +286,16 @@ header .row {
 
 .header__email--btn {
   z-index: 2;
+  margin: 8px;
   height: calc(100% - 16px);
+  border-radius: 500px;
   width: 160px;
-  background-color: rgb(100, 21, 255);
-  color: rgb(255, 255, 255);
+  border: none;
+  background-color: #6415ff;
+  color: #fff;
   font-weight: 700;
   font-size: 16px;
-  margin: 8px;
-  border-radius: 500px;
-  border-width: medium;
-  border-style: none;
-  border-color: rgb(26, 32, 44);
-  border-image: none;
-  transition: 300ms;
+  transition: all 300ms ease;
 }
 
 .header__customers--title {
@@ -1392,8 +1389,23 @@ img {
   }
 
   .header__email {
-    font-display: column;
+    flex-direction: column;
     height: auto;
+  }
+
+  .header__email--input {
+    position: static;
+    padding: 16px 0;
+    padding-left: 32px;
+    line-height: 1.5;
+  }
+
+  .header__email--btn {
+    width: 100%;
+    padding: 16px 0;
+    margin: 16px 0;
+    margin-bottom: 0px;
+    line-height: 1.5;
   }
 
   .header__customers--title {
@@ -1730,10 +1742,6 @@ img {
 
   .header__img {
     max-width: 100%;
-  }
-
-  .header__email {
-    margin: 0 auto;
   }
 
   .header__description--para {
